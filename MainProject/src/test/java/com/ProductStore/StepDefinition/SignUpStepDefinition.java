@@ -27,10 +27,8 @@ public class SignUpStepDefinition {
 	@Then("^the user clicks signup$")
 	public void the_user_clicks_signup() throws Throwable {
 	  signup.signUp();
-	  
-	}
-
-	@Then("^the user close the application$")
+	  }
+    @Then("^the user close the application$")
 	public void the_user_close_the_application() throws Throwable {
 		  signup.quit();
 	}
