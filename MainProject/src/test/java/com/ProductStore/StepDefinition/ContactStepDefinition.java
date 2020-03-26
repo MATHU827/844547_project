@@ -33,5 +33,4 @@ public class ContactStepDefinition {
 	  contact.sendMessage();
 	  contact.quit();
 	}
-
 }
