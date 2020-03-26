@@ -1,9 +1,14 @@
 package com.ProductStore.PagesObject;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -54,12 +59,17 @@ public class SelectAProductFromNextPage {
 			driver.findElement(next).click();
 		}
 	//To select a product from next page 
-		public void selectProduct() throws InterruptedException
+		public void selectProduct() throws InterruptedException, Throwable
 		{
 			Thread.sleep(3000);
 			driver.findElement(product).click();
+			Thread.sleep(4000);
+	//To take screenshot 
+	        TakesScreenshot ts=(TakesScreenshot)driver;
+			File ff=ts.getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(ff,new File("src\\test\\resources\\Screenshot\\product.png"));
 		}
-	//To exit from browser
+    //To exit from browser
 		public void quit()
 		{
 			driver.close();
