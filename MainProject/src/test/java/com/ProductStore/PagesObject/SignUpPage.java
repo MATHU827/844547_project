@@ -1,10 +1,14 @@
 package com.ProductStore.PagesObject;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
@@ -66,6 +70,14 @@ public class SignUpPage {
 	public void signUp () throws Throwable 
 	{
 		driver.findElement(signup_btn).click(); 
+	}
+	//To take screenshot 
+	public void screenShot(String path) throws IOException, Throwable
+	{
+        Thread.sleep(4000);
+		TakesScreenshot ts=(TakesScreenshot)driver;
+		File ff=ts.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(ff,new File(path));
 	}
 	//To exit from browser
 	public void quit()
