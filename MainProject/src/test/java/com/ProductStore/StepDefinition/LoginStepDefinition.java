@@ -44,7 +44,6 @@ public class LoginStepDefinition {
 				login.quit();
 			}
 	 }
-	   
 	}
 	@Then("^user clicks login$")
 	public void user_clicks_login() throws Throwable  {
