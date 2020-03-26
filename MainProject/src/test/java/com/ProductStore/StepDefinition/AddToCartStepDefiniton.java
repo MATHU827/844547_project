@@ -22,9 +22,7 @@ public class AddToCartStepDefiniton {
 	@Then("^user clicks on product and add to cart$")
 	public void user_clicks_on_product_and_add_to_cart() throws Throwable {
 		AddToCart.cart();
+		AddToCart.screenShot("src\\test\\resources\\Screenshot\\Addtocart.png");
 		AddToCart.quit();
 	}
-
-
-
 }
