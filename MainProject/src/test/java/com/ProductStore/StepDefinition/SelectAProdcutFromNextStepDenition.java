@@ -16,17 +16,17 @@ public class SelectAProdcutFromNextStepDenition {
 
 	@When("^user opens Product Store  Homepage$")
 	public void user_opens_Product_Store_Homepage() throws Throwable {
-	   product.productStoreHomepage();;
+	   product.productStoreHomepage();
 	}
 
 	@Then("^user clicks next$")
 	public void user_clicks_next() throws Throwable {
-	    product.clickNext();;
+	    product.clickNext();
 	}
 
 	@Then("^user selects product$")
 	public void user_selects_product() throws Throwable {
-	   product.selectProduct();;
+	   product.selectProduct();
 	   product.quit();
 	}
 }
