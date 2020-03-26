@@ -11,7 +11,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "src/main/resources/feature/ProductStore.feature",
 		plugin = {"pretty", "html:reports/cucumber-html-report","com.cucumber.listener.ExtentCucumberFormatter:reports/report.html"},
-		tags = {"@Tc01_SignUp,@Tc02_Login,@Tc03_Add_to_cart,@Tc04_Contact,@Tc05_clickproduct"},
+		tags = {"@Tc01_SignUp,@Tc02_Login,@Tc03_Add_to_cart,@Tc04_Contact,@Tc05_clickproduct,@Tc06_To_check_phone_number"},
 		glue = {"com.ProductStore.StepDefinition"},
 		monochrome = true
 		)
