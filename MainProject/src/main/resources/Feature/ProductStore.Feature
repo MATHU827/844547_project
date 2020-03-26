@@ -34,3 +34,11 @@ Scenario: To select a product
 	When  user opens Product Store  Homepage 
 	Then  user clicks next
 	Then  user selects product
+	
+@Tc06_To_check_phone_number
+Scenario: To check phone number
+    Given The user launched the Chrome Browser
+    When The user opens Product Store  Homepage
+    When User opens product Store homepage
+    Then User checks if the number is valid
+
